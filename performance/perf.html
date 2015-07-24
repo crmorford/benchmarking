@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/bower_components/jQuery/dist/jquery.js" charset="utf-8"></script>
+    <script src="/bower_components/d3/d3.js" charset="utf-8"></script>
+    <script src="/quicktests/exampleUtil.js"></script>
+    <script src="/bower_components/svg-typewriter/svgtypewriter.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" type="text/css" href="/plottable.css">
+    <link rel="stylesheet" type="text/css" href="/performance/perf.css">
+
+    <script src="/performance/perf.js" defer> </script>
+    <script src="/plottable.js"> </script> 
+
+    <title>Plottable Perf Testing</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1> Plottable Perf Testing </h1>
+    </div>
+
+    <div id="options">
+      <form action="">
+        <input type="checkbox" name="plot" value="Scatter" checked>Scatter<br>
+        <input type="checkbox" name="plot" value="Area" checked>Area<br>
+        <input type="checkbox" name="plot" value="Line" checked>Line<br> 
+        <input type="checkbox" name="plot" value="Bar" checked>Bar<br> 
+        <input type="checkbox" name="plot" value="StackedArea" checked>Stacked Area<br> 
+        <input type="checkbox" name="plot" value="StackedBar" checked>Stacked Bar<br> 
+        <input type="checkbox" name="plot" value="ClusteredBar" checked>Clustered Bar<br><br>
+        Number of Samples:
+        <input id="samples" type="number" name="quantity" min="1" max="20" value="10">
+      </form>
+      <br>
+      <button id="btn_run" onclick="run()">Run Perf Tests</button>
+      <p id="progress"> Progress: </p>
+    </div> 
+
+    <div id="results">
+      <svg id="chart" width="600" height="400"></svg>  
+    </div>
+
+    <div id="summary">
+    </div>
+
+  </body>
+</html>
